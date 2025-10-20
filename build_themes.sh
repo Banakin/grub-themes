@@ -21,6 +21,7 @@ for file in "$in_dir"/backgrounds/*.png; do
 
     # Create theme tar
     tar -cf $out_path \
+      --transform "s|assets/||" \
       --transform "s|backgrounds/"$file_name".png|background.png|" \
       --transform "s|fonts/||" \
       --transform "s|menu/||" \
