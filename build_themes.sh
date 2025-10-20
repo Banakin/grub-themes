@@ -7,6 +7,16 @@ for file in "$in_dir"/backgrounds/*.png; do
     out_path=$out_dir/$(basename "$file" .png).tar
 
     echo "Found background file: $file"
+
+    # Check for output directory
+    if [ ! -d "$out_dir" ]; then
+      echo "Creating folder: $out_dir"
+      mkdir -p "$out_dir"
+    else
+      echo "Found folder: $out_dir"
+    fi
+
+
     echo "Creating theme: $file_name..."
 
     # Create theme tar
