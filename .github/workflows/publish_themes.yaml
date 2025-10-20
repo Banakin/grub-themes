@@ -1,0 +1,19 @@
+on:
+  release:
+    types: [published]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run preparation script
+        run: |
+          chmod +x ./build_themes.sh
+          ./build_themes.sh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: themes
+          path: ./themes
