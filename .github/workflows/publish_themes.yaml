@@ -5,16 +5,16 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.ref_type == 'tag'
     steps:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Build THemes
+      - name: Build Themes
         run: |
           chmod +x ./build_themes.sh
           ./build_themes.sh
     
       - uses: softprops/action-gh-release@v2
-        if: github.ref_type == 'tag'
         with:
           files: themes/*

@@ -4,9 +4,12 @@ Fork of https://github.com/AdisonCavani/distro-grub-themes, but themes are my ow
 Graphics made with [Photopea](https://www.photopea.com/).
 
 ## Available Themes
-| Theme Name | Theme Preview |
-| --- | --- |
-| `ray_wave` | ![ray_wave theme preview](preview/ray_wave.png "`ray_wave` Theme Preview") |
+COMPLETE THEMES CAN BE DOWNLOADED FROM [THE RELEASES PAGE](https://github.com/Banakin/grub-themes/releases).
+
+
+| Theme Name | Download Link | Theme Preview |
+| --- | --- | --- |
+| `ray_wave` | [download](https://github.com/Banakin/grub-themes/releases/latest/download/ray_wave.tar) | ![ray_wave theme preview](preview/ray_wave.png "`ray_wave` Theme Preview") |
 
 ## Theme Generation & File Structure
 The original repo used nix for generation I think, also tar files were included in the repo? I just made a bash script.
